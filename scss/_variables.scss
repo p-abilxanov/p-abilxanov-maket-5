@@ -1,0 +1,239 @@
+//      header variables     //
+$headerTopBgColor: rgb(36, 40, 46);
+$headerTellIconColor: rgb(254, 254, 254);
+$headerTellNumberColor: rgb(254, 254, 254);
+$headerNavigationItemColor: rgb(254, 254, 254);
+$registerBgColor: rgba($color: #000000, $alpha: .8);
+$registerContainerBgColor: #fff;
+$registerContainerCloseBgColor: #000;
+$registerContainerCloseHoverBgColor: #999;
+$registerLabelColor: #000;
+$headerMenuContainerBgColor: rgb(255, 255, 255);
+$headerMenuLogoColor: rgb(85, 82, 82);
+$headerMenuNavigationHoverColor: rgb(255, 102, 0);
+$headerMenuNavigationColor: rgb(0, 0, 0);
+$hamburgerMenuBgColor: #fff;
+$headerSearchCheckedBorderColor: #999;
+
+$headerTellIconSize: 20px;
+$headerTellNumberSize: 14px;
+$headerEmailPaddingLeft: 33px;
+$headerContainerHeight: 50px;
+$headerNavigationItemPaddingLeft: 35px;
+$headerNavigationItemFontSize: 14px;
+$headerNavigationItemIconPaddingRight: 10px;
+$registerContainerPadding: 50px;
+$registerContainerBorderRadius: 10px;
+$registerTitleFontSize: 36px;
+$registerFormPadding: 15px;
+$registerLabelFontSize: 14px;
+$registerLabelMarginBottom: 10px;
+$registerLoginSavePaddingLeft: 5px;
+$registerForgotPasswordMarginTop: 20px;
+$registerForgotPasswordFontSize: 14px;
+$headerMenuHeight: 100px;
+$headerLogoTextPaddingLeft: 8px;
+$headerLogoTextFontSize: 30px;
+$headerNavigationPaddingRight: 20px;
+$headerNavigationItemPadding: 15px;
+$headerNavigationItemFontSize: 14px;
+$headerSearchPaddingLeft: 5px;
+$headerSearchCheckedWidth: 640px;
+$headerSearchCheckedPadding: 10px;
+$headerSearchInputFontSize: 14px;
+$headerSearchInputBorderRadius: 5px;
+
+
+
+
+
+//      banner variables    //
+$bannerBoxShadowColor: rgba($color: #000000, $alpha: .6);
+$bannerColor: #fff;
+$bannerBtnBorderColor: rgb(227, 75, 17);
+$bannerBtnColor: rgb(253, 253, 253);
+
+$bannerSlickArrowFontSize: 60px;
+$bannerContainerPaddingBottom: 196px;
+$bannerContainerTitlePaddingTop: 240px;
+$bannerContainerTitlePaddingBottom: 40px;
+$bannerContainerTitleFontSize: 60px;
+$bannerContainerSubTitleFontSize: 60px;
+$bannerContainerTextFontSize: 15px;
+$bannerContainerTextPadding: 45px;
+$bannerContainerTextWidth: 560px;
+$bannerBtnFontSize: 14px;
+$bannerBtnPadding: 15px 15px 15px 20px;
+$bannerPrevSize: 100px;
+
+
+
+//      about us variables
+$aboutUsTitleColor: rgb(85, 82, 82);
+$aboutUsItemBorderColor: #ccc;
+
+$aboutUsItemPadding: 10px;
+$aboutUsTitlePaddingTop: 140px;
+$aboutUsTitlePaddingBottom: 30px;
+$aboutUsTitleFontSize: 60px;
+$aboutUsCarouselPaddingTop: 60px;
+$aboutUsCarouselPaddingBottom: 130px;
+$aboutUsCarouselImgSize: 120px;
+$aboutUsCarouselIconSize: 60px;
+$aboutUsCarouselSubtitlePaddingTop: 32px;
+$aboutUsCarouselSubtitlePaddingBottom: 16px;
+$aboutUsCarouselSubtitleFontSize: 18px;
+$aboutUsCarouselTextFontSize: 14px;
+
+
+
+
+// latest courses variables
+$latestCoursesSubtitleColor: rgb(68, 68, 68);
+$latestCoursesStudentColor: rgb(68, 68, 68);
+$latestCoursesStarHoverColor: rgb(227, 75, 17);
+$latestCoursesStarColor: rgb(68, 68, 68);
+$latestCoursesBtnBoxShadowColor: rgba(0, 0, 0, 0.39);
+$latestCoursesBtnBgColor: rgb(255, 102, 0);
+$latestCoursesItemBgColor: rgb(255, 255, 255);
+
+$latestCoursesContainerPaddingTop: 130px;
+$latestCoursesCarouselPaddingTop: 60px;
+$latestCoursesSearchIconSize: 80px;
+$latestCoursesContentPadding: 18px 19px 27px 23px;
+$latestCoursesSubtitlePaddingBottom: 20px;
+$latestCoursesSubtitleFontSize: 22px;
+$latestCoursesSubtitleWidth: 260px;
+$latestCoursesRatingPaddingBottom: 20px;
+$latestCoursesStudentFontSize: 19px;
+$latestCoursesStudentIconPaddingRight: 8px;
+$latestCoursesStarFontSize: 19px;
+$latestCoursesBtnFontSize: 22px;
+
+
+
+
+
+//      teachers variables      //
+$teachersHoverBlockBgColor: rgba(227, 75, 17, .8);
+$teachersHoverBlockSubtitleColor: rgb(255, 255, 255);
+$teachersHoverBlockSocialIconColor: rgb(255, 255, 255);
+$teachersHoverBlockSocialIconHoverColor: rgb(227, 75, 17);
+
+$teachersCarouselPaddingTop: 65px;
+$teachersCarouselPaddingBottom: 140px;
+$teachersCarouselHoverBlockPadding: 18px 25px;
+$teachersCarouselSubtitlePaddingBottom: 10px;
+$teachersCarouselSubtitleFontSize: 18px;
+$teachersCarouselTextPaddingBottom: 20px;
+$teachersCarouselTextFontSize: 14px;
+$teachersCarouselSocialIconSize: 30px;
+
+
+
+
+//  faqs and news variables     //
+$ourCampusHoverBlockBgColor: linear-gradient(to right, rgba(0, 0, 0, .5) calc((100% - 1px) / 2), transparent calc((100% - 1px) / 2), transparent calc((100% - 1px) / 2 + 1px), rgba(0, 0, 0, .5) calc((100% - 1px) / 2 + 1px));
+$ourCampusBgColor: rgb(242, 242, 242);
+$ourBlogLabelBgColor: rgb(227, 75, 17);
+$ourBlogIconBorderColor: rgb(255, 255, 255);
+$faqsAccordionTitleColor: rgb(85, 82, 82);
+$faqsCarouselBtnBoxshadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);
+$faqsCarouselBtnHoverBoxshadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39),
+inset 0 -100px 0 rgba(0, 0, 0, .6);
+$faqsCarouselBtnColor: rgb(255, 255, 255);
+
+$ourBlogPaddingTop: 30px;
+$accordionMainPaddingTop: 10px;
+$faqsMainPaddingTop: 70px;
+$faqsAccordionMainMaxHeight: 130px;
+$faqsAccordionMainLabelPadding: 11px 0 11px 15px;
+$faqsAccordionMainLabelIconSize: 25px;
+$faqsAccordionNameSize: 18px;
+$faqsAccordionNamePaddingLeft: 20px;
+$faqsAccordionImgPaddingLeft: 3px;
+$faqsAccordionImgPaddingRight: 10px;
+$faqsAccordionTitleFontSize: 18px;
+$faqsAccordionTitlePaddingBottom: 3px;
+$faqsAccordionSubtitleFontSize: 18px;
+$faqsAccordionSubtitlePaddingBottom: 10px;
+$faqsAccordionTextFontSize: 15px;
+$faqsAccordionTextPaddingBottom: 15px;
+$faqsCarouselDateFontSize: 12px;
+$faqsCarouselDatePadding: 10px 0;
+$faqsCarouselTitleFontSize: 18px;
+$faqsCarouselTitlePaddingBottom: 12px;
+$faqsCarouselContentTextFontSize: 14px;
+$faqsCarouselContentTextPadding: 28px 0;
+$faqsCarouselContentBtnFontSize: 14px;
+$faqsCarouselContentBtnPadding: 15px 47px;
+$faqsTitleFontSize: 30px;
+$faqsTitlePaddingBottom: 20px;
+
+
+// VIDEO VARIABLES
+$videoPlayIconColor: #fff;
+$videoBoxshadowColor: rgba($color: #000000, $alpha: .7);
+$videoMacBookBgColor: linear-gradient(to top, transparent 16px, #3b3b3d 16px);
+$videoMacBookPaddingTop: 180px;
+$videoMacBookPaddingBottom: 80px;
+$videoPlayIconSize: 65px;
+
+
+// FOOTER VARIABLES
+$footerBgColor: rgb(45, 50, 55);
+$footerTitleColor: rgb(254, 254, 254);
+$footerTitleBottomBorderColor: rgb(227, 75, 17);
+$footerTimeTableBorderColor: rgb(204, 204, 204);
+$footerBtnBoxShadowColor: rgba($color: #000000, $alpha: .6);
+$footerPaddingTop: 75px;
+$footerPaddingBottom: 90px;
+$footerItemWidth: calc(100% / 3);
+$footerItemFirstPaddingRight: 40px;
+$footerItemSecondPaddingRight: 25px;
+$footerTitlePaddingBottom: 25px;
+$footerTitleFontSize: 24px;
+$footerTextPaddingTop: 35px;
+$footerTextFontSize: 14px;
+$footerSocialPaddingTop: 25px;
+$footerSocialSize: 42px;
+$footerSocialFontSize: 25px;
+$footerTimeTablePadding: 0 0 10px 4px;
+$footerTimeTableFontSize: 14px;
+$footerTimeTablePaddingTop: 12px;
+$footerFormTextareaMarginBottom: 14px;
+$footerFormTextareaPadding: 11px 15px;
+$footerFormTextareaFontSize: 14px;
+$footerFormTextareaHeight: 85px;
+$footerFormBtnFontSize: 14px;
+$footerFormBtnPadding: 12px 55px;
+
+
+// GALLERY VARIABLES
+$galleryCheckedLabelColor: rgb(255, 255, 255);
+$galleryCheckedLabelBgColor: #e34b11;
+$galleryLabelBorderColor: rgb(149, 149, 149);
+$galleryLabelColor: #555252;
+$galleryCarouselHoverBgColor: rgba($color: #000000, $alpha: .6);
+
+$galleryTabsPaddingTop: 100px;
+$galleryTabsPaddingBottom: 130px;
+$galleryLabelPaddingBottom: 90px;
+$galleryLabelPadding: 9px 15px;
+$galleryLabelFontSize: 16px;
+$galleryImgMaxWidth: 270px;
+$galleryCarouselHoverMarginLeft: 15px;
+$galleryCarouselHoverLabelSize: 50px;
+$galleryCarouselHoverLabelFontSize: 25px;
+
+// font family variables
+$fontFamilyRobotoLight: 'Roboto - Light';
+$fontFamilyRobotoBold: 'Roboto - Bold';
+$fontFamilyRobotoRegular: 'Roboto - Regular';
+$fontFamilyRobotoMedium: 'Roboto - Medium';
+$fontFamilyOpenSansLight: 'OpenSans - Light';
+$fontFamilyOpenSansRegular: 'OpenSans - Regular';
+$fontFamilyOpenSansBold: 'OpenSans - Bold';
+$fontFamilyOpenSansSemiBold: 'OpenSans - SemiBold';
+$fontFamilyRobotoSlabBold: 'RobotoSlab - Bold';
+$fontFamilyUbuntuRegular: 'Ubuntu - Regular';

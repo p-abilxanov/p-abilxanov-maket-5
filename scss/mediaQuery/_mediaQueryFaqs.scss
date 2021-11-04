@@ -1,0 +1,367 @@
+@media only screen and (min-width: 1131px) {
+    .faqs__main {
+        @include flexbox(none, space-between, none);
+    }
+
+    .our-instructors {
+        width: 30%;
+    }
+
+    .our-blog {
+        width: calc(70% - 15px);
+
+        .faqs-carousel {
+            width: 100%;
+            @include flexbox(none, space-between, none);
+
+            .faqsCarousel__item {
+                margin: 0 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .faqs__main {
+        @include flexbox(column, none, center);
+    }
+
+    .our-instructors {
+        width: 90%;
+    }
+
+    .our-blog {
+        padding-top: $ourBlogPaddingTop;
+        width: 90%;
+
+        .faqs-carousel {
+            width: 100%;
+            @include flexbox(none, space-between, none);
+
+            .faqsCarousel__item {
+                margin: 0 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) and (min-width: 876px) {
+    .our-instructors {
+        max-height: 550px;
+    }
+}
+
+@media only screen and (min-width: 876px) {
+    .faqs .container {
+        padding-bottom: $teachersCarouselPaddingBottom;
+    }
+
+    .faqs__main {
+        padding-top: $faqsMainPaddingTop;
+    }
+
+    .our-instructors {
+        .faqs__accordion {
+            .faqsAccordion__item {
+                input {
+                    &:checked {
+                        &+label .accordion__main {
+                            height: $faqsAccordionMainMaxHeight;
+                        }
+                    }
+                }
+
+                label {
+
+                    .accordion-label {
+                        padding: $faqsAccordionMainLabelPadding;
+
+                        span:nth-child(1) {
+                            @include blockSize(30px, 30px);
+
+                            i {
+                                font-size: $faqsAccordionMainLabelIconSize;
+                            }
+                        }
+
+                        span:nth-child(2) {
+                            padding-left: $faqsAccordionNamePaddingLeft;
+                            font-size: $faqsAccordionNameSize;
+                        }
+                    }
+                }
+
+                .accordion__main {
+                    height: 0;
+                    transition: height .5s;
+
+                    .accordion__img {
+                        padding-left: $faqsAccordionImgPaddingLeft;
+                        padding-right: $faqsAccordionImgPaddingRight;
+                    }
+
+                    .accordion__content {
+                        .accordion__title {
+                            font-size: $faqsAccordionTitleFontSize;
+                            padding-bottom: $faqsAccordionTitlePaddingBottom;
+                        }
+
+                        .accordion__subtitle {
+                            font-size: $faqsAccordionSubtitleFontSize;
+                            padding-bottom: $faqsAccordionSubtitlePaddingBottom;
+                        }
+
+                        .accordion__text {
+                            font-size: $faqsAccordionTextFontSize;
+                            padding-bottom: $faqsAccordionTextPaddingBottom;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .faqsInnerCarousel__item {
+        .faqsCarousel__date {
+            font-size: $faqsCarouselDateFontSize;
+            padding: $faqsCarouselDatePadding;
+        }
+
+        .faqsCarousel__title {
+            font-size: $faqsCarouselTitleFontSize;
+            padding-bottom: $faqsCarouselTitlePaddingBottom;
+        }
+    }
+
+    .faqsCarousel__content {
+        .faqsCarousel__text {
+            padding: $faqsCarouselContentTextPadding;
+            font-size: $faqsCarouselContentTextFontSize;
+        }
+
+        .faqsCarousel__btn {
+            a {
+                padding: $faqsCarouselContentBtnPadding;
+                font-size: $faqsCarouselContentBtnFontSize;
+            }
+        }
+    }
+
+    .ourInstructors__title,
+    .ourBlog__title {
+        font-size: $faqsTitleFontSize;
+        padding-bottom: $faqsTitlePaddingBottom;
+    }
+}
+
+@media only screen and (max-width: 875px) and (min-width: 380px) {
+    .faqs .container {
+        padding-bottom: calc(.4em + 4vw);
+    }
+
+    .faqs__main {
+        padding-top: calc(.5em + 5vw);
+    }
+
+    .our-instructors {
+        height: calc(10em + 80vw);
+
+        .faqs__accordion {
+            .faqsAccordion__item {
+                input {
+                    &:checked {
+                        &+label .accordion__main {
+                            height: calc(2em + 18vw);
+                        }
+                    }
+                }
+
+                label {
+
+                    .accordion-label {
+                        padding-left: calc(.2em + 2vw);
+                        padding: calc(.2em + 1.5vw) 0 calc(.2em + 1.5vw) calc(.2em + 2vw);
+
+                        span:nth-child(1) {
+                            @include blockSize(calc(.4em + 5vw), calc(.4em + 5vw));
+
+                            i {
+                                font-size: calc(.3em + 3vw);
+                            }
+                        }
+
+                        span:nth-child(2) {
+                            padding-left: calc(.3em + 3vw);
+                            font-size: calc(.3em + 2.5vw);
+                        }
+                    }
+                }
+
+                .accordion__main {
+                    height: 0;
+                    transition: height .4s;
+
+                    .accordion__img {
+                        padding-left: 3px;
+                        padding-right: calc(1.5em + 1.5vw);
+                    }
+
+                    .accordion__content {
+                        .accordion__title {
+                            font-size: calc(.3em + 3vw);
+                            padding-bottom: 3px;
+                        }
+
+                        .accordion__subtitle {
+                            font-size: calc(.2em + 2.5vw);
+                            padding-bottom: calc(1em + .2vw);
+                        }
+
+                        .accordion__text {
+                            font-size: calc(.15em + 1.5vw);
+                            padding-bottom: calc(.1em + 1vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .faqsInnerCarousel__item {
+        .faqsCarousel__date {
+            font-size: calc(.2em + 1.5vw);
+            padding: calc(1.5em + 1.5vw) 0;
+        }
+
+        .faqsCarousel__title {
+            font-size: calc(.3em + 3vw);
+            padding-bottom: calc(.2em + 2vw);
+        }
+    }
+
+    .faqsCarousel__content {
+        .faqsCarousel__text {
+            padding: calc(.3em + 3vw) 0;
+            font-size: calc(.2em + 2vw);
+        }
+
+        .faqsCarousel__btn {
+            a {
+                padding: calc(.2em + 2vw) calc(.4em + 4vw);
+                font-size: calc(.2em + 2vw);
+            }
+        }
+    }
+
+    .ourInstructors__title,
+    .ourBlog__title {
+        font-size: calc(.3em + 4vw);
+        padding-bottom: calc(.3em + 3vw);
+    }
+}
+
+@media only screen and (max-width: 379px) {
+    .faqs .container {
+        padding-bottom: calc(.4em + 4vw);
+    }
+
+    .faqs__main {
+        padding-top: calc(.5em + 5vw);
+    }
+
+    .our-instructors {
+        height: calc(10em + 83vw);
+
+        .faqs__accordion {
+            .faqsAccordion__item {
+                input {
+                    &:checked {
+                        &+label .accordion__main {
+                            height: calc(3em + 20vw);
+                        }
+                    }
+                }
+
+                label {
+
+                    .accordion-label {
+                        padding-left: calc(.2em + 2vw);
+                        padding: calc(.2em + 1.5vw) 0 calc(.2em + 1.5vw) calc(.2em + 2vw);
+
+                        span:nth-child(1) {
+                            @include blockSize(calc(.4em + 5vw), calc(.4em + 5vw));
+
+                            i {
+                                font-size: calc(.3em + 3vw);
+                            }
+                        }
+
+                        span:nth-child(2) {
+                            padding-left: calc(.3em + 3vw);
+                            font-size: calc(.3em + 2.5vw);
+                        }
+                    }
+                }
+
+                .accordion__main {
+                    height: 0;
+                    transition: height .4s;
+
+                    .accordion__img {
+                        padding-left: 3px;
+                        padding-right: calc(1.5em + 1.5vw);
+                    }
+
+                    .accordion__content {
+                        .accordion__title {
+                            font-size: calc(.3em + 3vw);
+                            padding-bottom: 3px;
+                        }
+
+                        .accordion__subtitle {
+                            font-size: calc(.2em + 2.5vw);
+                            padding-bottom: calc(1em + .2vw);
+                        }
+
+                        .accordion__text {
+                            font-size: calc(.15em + 1.5vw);
+                            padding-bottom: calc(.1em + 1vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .faqsInnerCarousel__item {
+        .faqsCarousel__date {
+            font-size: calc(.2em + 1.5vw);
+            padding: calc(1.5em + 1.5vw) 0;
+        }
+
+        .faqsCarousel__title {
+            font-size: calc(.3em + 3vw);
+            padding-bottom: calc(.2em + 2vw);
+        }
+    }
+
+    .faqsCarousel__content {
+        .faqsCarousel__text {
+            padding: calc(.3em + 3vw) 0;
+            font-size: calc(.2em + 2vw);
+        }
+
+        .faqsCarousel__btn {
+            a {
+                padding: calc(.2em + 2vw) calc(.4em + 4vw);
+                font-size: calc(.2em + 2vw);
+            }
+        }
+    }
+
+    .ourInstructors__title,
+    .ourBlog__title {
+        font-size: calc(.3em + 4vw);
+        padding-bottom: calc(.3em + 3vw);
+    }
+}

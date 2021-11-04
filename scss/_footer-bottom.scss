@@ -1,0 +1,15 @@
+.footer-bottom {
+    background-color: rgb(0, 0, 0);
+
+    .container {
+        height: 90px;
+        @include flexbox(none, center, center);
+        color: rgb(254, 254, 254);
+        font-family: $fontFamilyUbuntuRegular;
+
+        span {
+            color: #e34b11;
+            padding-left: 2px;
+        }
+    }
+}

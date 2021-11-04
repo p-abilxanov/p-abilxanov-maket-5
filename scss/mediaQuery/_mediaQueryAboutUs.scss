@@ -1,0 +1,67 @@
+@media only screen and (min-width: 876px) {
+    .aboutUs__title {
+        padding-top: $aboutUsTitlePaddingTop;
+        padding-bottom: $aboutUsTitlePaddingBottom;
+        font-size: $aboutUsTitleFontSize;
+    }
+
+    .aboutUs-carousel {
+        padding-top: $aboutUsCarouselPaddingTop;
+        padding-bottom: $aboutUsCarouselPaddingBottom;
+
+
+        .aboutUs__item {
+            .aboutUs__img {
+                @include blockSize($aboutUsCarouselImgSize, $aboutUsCarouselImgSize);
+
+                i {
+                    font-size: $aboutUsCarouselIconSize;
+                }
+            }
+
+            .aboutUs__subtitle {
+                padding-top: $aboutUsCarouselSubtitlePaddingTop;
+                padding-bottom: $aboutUsCarouselSubtitlePaddingBottom;
+                font-size: $aboutUsCarouselSubtitleFontSize;
+            }
+
+            .aboutUs__text {
+                font-size: $aboutUsCarouselTextFontSize;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .aboutUs__title {
+        padding-top: calc(.5em + 5vw);
+        padding-bottom: calc(.3em + 3vw);
+        font-size: calc(.5em + 4vw);
+    }
+
+    .aboutUs-carousel {
+        padding-top: calc(.3em + 3vw);
+        padding-bottom: calc(.5em + 5vw);
+
+
+        .aboutUs__item {
+            .aboutUs__img {
+                @include blockSize(calc(1em + 12vw), calc(1em + 12vw));
+
+                i {
+                    font-size: calc(.6em + 5vw);
+                }
+            }
+
+            .aboutUs__subtitle {
+                padding-top: calc(.3em + 3vw);
+                padding-bottom: calc(.2em + 3vw);
+                font-size: calc(.3em + 2vw);
+            }
+
+            .aboutUs__text {
+                font-size: calc(.2em + 2vw);
+            }
+        }
+    }
+}

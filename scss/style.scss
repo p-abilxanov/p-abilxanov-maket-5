@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+.wrapper {
+    width: 100%;
+}
+
+.title-group {
+    font-family: $fontFamilyRobotoSlabBold;
+    color: $aboutUsTitleColor;
+    text-transform: uppercase;
+}
+
+@import './mediaQuery/mediaQueryStyle';
+
+@import 'headerTop';
+@import './mediaQuery/mediaQueryHeaderTop';
+
+@import 'headerMenu';
+@import './mediaQuery/mediaQueryHeaderMenu';
+
+@import 'banner';
+@import './mediaQuery/mediaQueryBanner';
+
+@import 'aboutUs';
+@import './mediaQuery/mediaQueryAboutUs';
+
+@import 'latestCourses';
+@import './mediaQuery/mediaQueryLatestCourses';
+
+@import 'teachers';
+@import './mediaQuery/mediaQueryTeachers';
+
+@import 'ourCampus';
+@import './mediaQuery/mediaQueryOurCampus';
+
+@import 'faqs';
+@import './mediaQuery/mediaQueryFaqs';
+
+@import 'gallery';
+@import './mediaQuery/mediaQueryGallery';
+
+@import 'macbook';
+@import './mediaQuery/mediaQueryMacbook';
+
+@import 'footer';
+@import './mediaQuery/mediaQueryFooter';
+
+@import 'footer-bottom';
+@import './mediaQuery/mediaQueryFooter-bottom';

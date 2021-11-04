@@ -1,0 +1,126 @@
+.aboutUs {
+    width: 100%;
+
+    .container {
+        overflow: hidden;
+        @include flexbox(column, none, none);
+    }
+}
+
+.aboutUs__title {
+    align-self: center;
+}
+
+.aboutUs-carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @include flexbox(none, center, none);
+
+    .slick-dots {
+        cursor: pointer;
+        top: 0;
+        position: absolute;
+        @include flexbox(none, none, none);
+
+        .slick-active {
+            button {
+                width: 53px;
+                background-color: $bannerBtnBorderColor;
+            }
+        }
+
+        li {
+            button {
+                display: block;
+                @include blockSize(43px, 3px);
+                transition: width .5s, background-color .5s;
+                background-color: $aboutUsTitleColor;
+                font-size: 0;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .aboutUs__item {
+        padding: $aboutUsItemPadding;
+        margin: 0 $aboutUsItemPadding;
+        @include flexbox(column, center, center);
+        cursor: pointer;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+
+        &::before {
+            @include blockSize(0, inherit);
+            transition: width .5s;
+            border-top: 1px solid $aboutUsItemBorderColor;
+            border-bottom: 1px solid $aboutUsItemBorderColor;
+        }
+
+        &::after {
+            @include blockSize(inherit, 0);
+            transition: height .5s;
+            border-left: 1px solid $aboutUsItemBorderColor;
+            border-right: 1px solid $aboutUsItemBorderColor;
+        }
+
+        &:hover {
+
+            &::before {
+                width: 100%;
+            }
+
+            &::after {
+                height: 100%;
+            }
+
+            .aboutUs__img {
+                border-color: $bannerBtnBorderColor;
+
+                i {
+                    color: $bannerBtnBorderColor;
+                }
+            }
+
+            .aboutUs__subtitle,
+            .aboutUs__text {
+                color: $bannerBtnBorderColor;
+            }
+        }
+
+        .aboutUs__img {
+            border-radius: 50%;
+            border-color: $aboutUsTitleColor;
+            border-width: 2px;
+            border-style: solid;
+            transition: border-color .5s;
+            @include flexbox(none, center, center);
+
+            i {
+                color: $aboutUsTitleColor;
+                transition: color .5s;
+            }
+        }
+
+        .aboutUs__subtitle {
+            font-family: $fontFamilyOpenSansBold;
+            color: $aboutUsTitleColor;
+            text-transform: uppercase;
+            transition: color .5s;
+        }
+
+        .aboutUs__text {
+            font-family: $fontFamilyUbuntuRegular;
+            color: $aboutUsTitleColor;
+            line-height: 1.714;
+            text-align: center;
+            transition: color .5s;
+        }
+    }
+}

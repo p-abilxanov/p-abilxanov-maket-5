@@ -1,0 +1,115 @@
+.footer {
+    background-color: $footerBgColor;
+}
+
+.footer__title {
+    color: $footerTitleColor;
+    font-family: $fontFamilyOpenSansBold;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        @include blockSize(50%, 3px);
+        background-color: $footerTitleBottomBorderColor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.footer__text {
+    color: $footerTitleColor;
+    line-height: 1.714;
+    font-family: $fontFamilyUbuntuRegular;
+}
+
+.footer__social {
+    width: 100%;
+
+    ul {
+        @include flexbox(none, space-between, none);
+        width: 100%;
+
+        li {
+            a {
+                @include flexbox(none, center, center);
+                border: 1px solid $footerTitleColor;
+                border-radius: 3px;
+                transition: border-color .5s, background-color .5s;
+
+                i {
+                    color:$footerTitleColor;
+                }
+
+                &:hover {
+                    border-color: $footerTitleBottomBorderColor;
+                    background-color: $footerTitleBottomBorderColor;
+                }
+            }
+        }
+    }
+}
+
+.footer__timetable {
+    width: 100%;
+
+    ul {
+        width: inherit;
+
+        li {
+            width: inherit;
+            @include flexbox(none, space-between, none);
+
+            span {
+                font-family: $fontFamilyOpenSansRegular;
+                color: $footerTitleColor;
+            }
+
+            &:nth-child(n+2) {
+                border-top: 1px solid $footerTimeTableBorderColor;
+            }
+        }
+    }
+}
+
+.footer {
+    form {
+        @include flexbox(column, none, none);
+
+        input[id="name"],
+        input[id="tel"],
+        textarea {
+            border: 1px solid $footerTimeTableBorderColor;
+            background-color: transparent;
+            font-family: $fontFamilyOpenSansRegular;
+            color: $footerTitleColor;
+        }
+
+        input[id="name"]::placeholder,
+        input[id="tel"]::placeholder,
+        textarea::placeholder {
+            font-family: $fontFamilyOpenSansRegular;
+            color: $footerTitleColor;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input[type="submit"] {
+            align-self: flex-start;
+            border-radius: 3px;
+            background-color: $footerTitleBottomBorderColor;
+            font-family: $fontFamilyOpenSansRegular;
+            color: $footerTitleColor;
+            transition: box-shadow .5s;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: inset 0 -60px 0 $footerBtnBoxShadowColor;
+            }
+        }
+    }
+}

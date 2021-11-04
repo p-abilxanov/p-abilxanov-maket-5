@@ -1,0 +1,105 @@
+.header__menu {
+    .container {
+        @include flexbox(none, space-between, center);
+        background-color: $headerMenuContainerBgColor;
+        position: relative;
+    }
+}
+
+.header__logo {
+    cursor: pointer;
+    @include flexbox(none, none, center);
+
+    span {
+        font-family: $fontFamilyRobotoLight;
+        color: $headerMenuLogoColor;
+    }
+}
+
+.header__navigation {
+    ul {
+        li {
+            a {
+                &:hover {
+                    color: $headerMenuNavigationHoverColor;
+
+                    &::before,
+                    &::after {
+                        background-color: $headerMenuNavigationHoverColor;
+                    }
+                }
+
+                position: relative;
+                box-sizing: border-box;
+                color: $headerMenuNavigationColor;
+                font-family: $fontFamilyOpenSansBold;
+                text-transform: uppercase;
+                transition: color .5s;
+
+                &::before,
+                &::after {
+                    content: "";
+                    display: block;
+                    @include blockSize(3px, 100%);
+                    position: absolute;
+                    top: 0;
+                    background-color: transparent;
+                    transition: background-color .5s;
+                }
+
+                &::before {
+                    left: 0;
+                }
+
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+input[id="hamburgerMenu"] {
+    &:checked~.header__navigation {
+        right: 0;
+    }
+
+    &+label {
+        position: absolute;
+        cursor: pointer;
+        z-index: 3;
+
+        span {
+            display: block;
+            background-color: $hamburgerMenuBgColor;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                @include blockSize(inherit, inherit);
+                background-color: inherit;
+            }
+        }
+    }
+}
+
+.header__search {
+    @include flexbox(none, none, center);
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    input[type="search"] {
+        font-family: $fontFamilyOpenSansRegular;
+        outline: none;
+        overflow: hidden;
+    }
+}

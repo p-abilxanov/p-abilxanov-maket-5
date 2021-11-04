@@ -1,0 +1,182 @@
+.header__top {
+    width: 100%;
+    background-color: $headerTopBgColor;
+}
+
+.headerTop__contact {
+
+    .header__tell,
+    .header__email {
+        @include flexbox(none, none, center);
+
+        a {
+            @include flexbox(none, none, center);
+            font-family: $fontFamilyOpenSansLight;
+
+            i {
+                color: $headerTellIconColor;
+            }
+
+            span {
+                color: $headerTellNumberColor;
+            }
+        }
+    }
+}
+
+.headerTop__navigation {
+    ul {
+        li {
+
+            a,
+            label {
+                font-family: $fontFamilyOpenSansRegular;
+                color: $headerNavigationItemColor;
+                cursor: pointer;
+            }
+
+            input[id="register__open"] {
+                display: none;
+
+                &:checked~.register {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.register {
+    position: fixed;
+    bottom: 100%;
+    left: 0;
+    z-index: 100;
+    transition: bottom .5s;
+    @include blockSize(100vw, 100vh);
+    background-color: $registerBgColor;
+    @include flexbox(none, center, center);
+
+    .register__container {
+        background-color: $registerContainerBgColor;
+        @include flexbox(column, space-evenly, none);
+        position: relative;
+
+        label[for="register__open"] {
+            position: absolute;
+            cursor: pointer;
+
+            &:hover span {
+                background-color: $registerContainerCloseHoverBgColor;
+            }
+
+            span {
+                transition: background-color .5s;
+                display: block;
+                background-color: $registerContainerCloseBgColor;
+                transform-origin: center;
+
+                &:nth-child(1) {
+                    transform: rotateZ(45deg) translateX(-1px);
+                }
+
+                &:nth-child(2) {
+                    transform: rotateZ(-45deg) translateY(-2px) translateX(.5px);
+                }
+            }
+        }
+
+        .register__title {
+            text-align: center;
+            font-family: $fontFamilyOpenSansBold;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            @include flexbox(column, none, none);
+
+            label {
+                font-family: $fontFamilyRobotoRegular;
+                color: $registerLabelColor;
+
+                input {
+                    outline: none;
+                    border: 1px solid #ccc;
+                }
+            }
+
+            label:not([for="loginSave"]) {
+                @include flexbox(none, space-between, center);
+            }
+
+            label[for="loginSave"] {
+                align-self: flex-start;
+            }
+
+            input[type="submit"] {
+                font-family: $fontFamilyRobotoRegular;
+                border: 1px solid $registerContainerCloseHoverBgColor;
+                outline: none;
+            }
+
+            a {
+                color: $registerLabelColor;
+                font-family: $fontFamilyRobotoRegular;
+                align-self: center;
+                transition: color .5s;
+
+                &:hover {
+                    color: $registerContainerCloseHoverBgColor;
+                }
+            }
+        }
+    }
+}
+
+label[for="loginSave"] {
+    input {
+        display: none;
+
+        &:checked+label {
+            svg {
+                .back__block {
+                    transform: scale(0);
+                }
+                polyline {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        &+label {
+            cursor: pointer;
+
+            svg {
+                polyline {
+                    fill: none;
+                    stroke: #ffffff;
+                    stroke-width: 2px;
+                    transform: scale(0);
+                    transition: transform .5s;
+                    transform-origin: center;
+                    transition-delay: .5s;
+                }
+
+                .front__block {
+                    fill: #000000;
+                }
+
+                .back__block {
+                    fill: #fff;
+                    transition: transform .5s;
+                    transform-origin: center;
+                }
+
+                .back__border {
+                    fill: none;
+                    stroke: #ccc;
+                    stroke-width: 2px;
+                }
+            }
+        }
+    }
+}

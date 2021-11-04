@@ -1,0 +1,258 @@
+@media only screen and (min-width: 876px) {
+    .header__top {
+        .container {
+            @include flexbox(none, space-between, center);
+            height: $headerContainerHeight;
+        }
+    }
+
+    .headerTop__contact {
+        @include flexbox(none, none, center);
+    }
+
+    .header__tell,
+    .header__email {
+        a {
+            i {
+                font-size: $headerTellIconSize;
+            }
+
+            span {
+                padding-left: 5px;
+                font-size: $headerTellNumberSize;
+            }
+        }
+    }
+
+    .header__email {
+        padding-left: $headerEmailPaddingLeft;
+    }
+
+    .headerTop__navigation {
+        ul {
+            @include flexbox(none, none, center);
+
+            li {
+                &:nth-child(n+2) {
+                    padding-left: $headerNavigationItemPaddingLeft;
+                }
+
+                a,
+                label {
+                    font-size: $headerNavigationItemFontSize;
+
+                    i {
+                        padding-right: $headerNavigationItemIconPaddingRight;
+                    }
+                }
+            }
+        }
+    }
+
+    .register {
+        .register__container {
+            padding: 0 $registerContainerPadding;
+            border-radius: $registerContainerBorderRadius;
+
+            label[for="register__open"] {
+                right: 30px;
+                top: 30px;
+
+                span {
+                    @include blockSize(20px, 2px);
+                }
+            }
+
+            .register__title {
+                font-size: $registerTitleFontSize;
+            }
+
+            form {
+                border-radius: $registerContainerBorderRadius;
+                padding: $registerFormPadding;
+
+                label {
+                    @include flexbox(none, none, center);
+                    font-size: $registerLabelFontSize;
+                    margin-bottom: $registerLabelMarginBottom;
+
+                    input {
+                        border-radius: #{$registerContainerBorderRadius / 2};
+                        padding: #{$registerContainerBorderRadius / 2} $registerContainerBorderRadius;
+                    }
+                }
+
+                label[for="loginSave"] {
+                    span {
+                        padding-left: $registerLoginSavePaddingLeft;
+                        padding-bottom: 5px;
+                    }
+                }
+
+                input[type="submit"] {
+                    padding: #{$registerContainerBorderRadius / 2} $registerContainerBorderRadius;
+                    border-radius: $registerContainerBorderRadius;
+                    font-size: #{$registerLabelFontSize + 4px};
+                }
+
+                a {
+                    margin-top: $registerForgotPasswordMarginTop;
+                    font-size: $registerForgotPasswordFontSize;
+                }
+            }
+        }
+    }
+
+    label[for="loginSave"] {
+        svg {
+            @include blockSize(25px, 25px);
+        }
+    }
+
+}
+
+@media only screen and (max-width: 875px) {
+    .header__top {
+        .container {
+            @include flexbox(column, none, none);
+            padding-top: calc(.3em + 2vw);
+            padding-bottom: calc(.3em + 2vw);
+        }
+    }
+
+    .headerTop__contact {
+        @include flexbox(none, space-evenly, center);
+        padding-bottom: calc(.3em + 2vw);
+    }
+
+    .header__tell,
+    .header__email {
+        a {
+            i {
+                font-size: calc(.3em + 3vw);
+            }
+
+            span {
+                padding-left: calc(.2em + 1.5vw);
+                font-size: calc(.2em + 2vw);
+            }
+        }
+    }
+
+    .headerTop__navigation {
+        ul {
+            @include flexbox(none, space-between, center);
+
+            li {
+
+                a,
+                label {
+                    font-size: calc(.2em + 2vw);
+
+                    i {
+                        padding-right: calc(.1em + 1vw);
+                    }
+                }
+            }
+        }
+    }
+
+    .register {
+        .register__container {
+            padding: 0 calc(.2em + 2vw);
+            border-radius: calc(.2em + 2vw);
+
+            label[for="register__open"] {
+                right: 20px;
+                top: 20px;
+
+                span {
+                    @include blockSize(20px, 2px);
+                }
+            }
+
+            .register__title {
+                font-size: calc(.3em + 3vw);
+                display: none;
+            }
+
+            form {
+                border-radius: calc(.2em + 2vw);
+                border: none;
+                padding: calc(.2em + 2vw);
+                padding-top: calc(1em + 8vw);
+
+                label {
+                    @include flexbox(none, none, baseline);
+                    font-size: calc(.2em + 2vw);
+                    margin-bottom: calc(.2em + 2vw);
+
+                    input {
+                        border-radius: calc(.2em + 1vw);
+                        padding: calc(.1em + .5vw) calc(.2em + 1.5vw);
+                    }
+
+                    input[type="email"],
+                    input[type="password"] {
+                        width: 100%;
+                    }
+                }
+
+                label:not([for="loginSave"]) {
+                    span {
+                        display: none;
+                    }
+                }
+
+                label[for="loginSave"] {
+                    span {
+                        padding-left: calc(.2em + 2vw);
+                        // padding-bottom: calc(.1em + 1vw);
+                    }
+                }
+
+                input[type="submit"] {
+                    width: auto;
+                    padding: #{$registerContainerBorderRadius / 2} $registerContainerBorderRadius;
+                    border-radius: $registerContainerBorderRadius;
+                    font-size: calc(.3em + 2vw);
+                }
+
+                a {
+                    margin-top: calc(.3em + 3vw);
+                    font-size: calc(.2em + 2vw);
+                }
+            }
+        }
+    }
+
+    label[for="loginSave"] {
+        svg {
+            @include blockSize(calc(.2em + 3vw), calc(.2em + 3vw));
+        }
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .register {
+        .register__container {
+            @include blockSize(40vw, 50vh);
+        }
+    }
+}
+
+@media only screen and (max-width: 959px) and (min-width: 876px) {
+    .register {
+        .register__container {
+            @include blockSize(50vw, 50vh);
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .register {
+        .register__container {
+            @include blockSize(50vw, auto);
+        }
+    }
+}

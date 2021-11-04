@@ -1,0 +1,195 @@
+
+@media only screen and (min-width: 876px) {
+    .footer {
+        .container {
+            padding-top: $footerPaddingTop;
+            padding-bottom: $footerPaddingBottom;
+            @include flexbox(none, space-between, none);
+
+            .footer__item {
+                flex-basis: $footerItemWidth;
+
+                &:nth-child(1) {
+                    padding-right: $footerItemFirstPaddingRight;
+                }
+
+                &:nth-child(2) {
+                    padding-right: $footerItemSecondPaddingRight;
+                }
+            }
+        }
+    }
+
+    .footer__title {
+        font-size: $footerTitlePaddingBottom;
+        padding-bottom: $footerTitleFontSize;
+    }
+
+    .footer {
+
+        .footer__text,
+        form,
+        .footer__timetable {
+            padding-top: $footerTextPaddingTop;
+        }
+    }
+
+    .footer__text {
+        font-size: $footerTextFontSize;
+    }
+
+    .footer__social {
+        padding-top: $footerSocialPaddingTop;
+
+        ul {
+            li {
+                a {
+                    @include blockSize($footerSocialSize, $footerSocialSize);
+
+                    i {
+                        font-size: $footerSocialFontSize;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__timetable {
+        ul {
+            li {
+                padding: $footerTimeTablePadding;
+
+                span {
+                    font-size: $footerTimeTableFontSize;
+                }
+
+                &:nth-child(n+2) {
+                    padding-top: $footerTimeTablePaddingTop;
+                }
+            }
+        }
+    }
+
+    .footer {
+        form {
+
+            input[id="name"],
+            input[id="tel"],
+            textarea {
+                margin-bottom: $footerFormTextareaMarginBottom;
+                padding: $footerFormTextareaPadding;
+                font-size: $footerFormTextareaFontSize;
+            }
+
+            input[id="name"]::placeholder,
+            input[id="tel"]::placeholder,
+            textarea::placeholder {
+                font-size: $footerFormTextareaFontSize;
+            }
+
+            textarea {
+                height: $footerFormTextareaHeight;
+            }
+
+            input[type="submit"] {
+                margin-top: 4px;
+                align-self: flex-start;
+                padding: $footerFormBtnPadding;
+                font-size: $footerFormBtnFontSize;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .footer {
+        @include flexbox(none, center, center);
+
+        .container {
+            padding-bottom: calc(.5em + 5vw);
+            @include flexbox(column, center, none);
+            width: 90%!important;
+        }
+    }
+
+    .footer__title {
+        font-size: calc(.3em + 4vw);
+        padding-top: calc(.5em + 5vw);
+        padding-bottom: calc(.3em + 4vw);
+    }
+
+    .footer {
+
+        .footer__text,
+        form,
+        .footer__timetable {
+            padding-top: calc(.4em + 4vw);
+        }
+    }
+
+    .footer__text {
+        font-size: calc(.2em + 2vw);
+    }
+
+    .footer__social {
+        padding-top: calc(.3em + 4vw);
+
+        ul {
+            li {
+                a {
+                    @include blockSize(calc(.5em + 6vw), calc(.5em + 6vw));
+
+                    i {
+                        font-size: calc(.3em + 4vw);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__timetable {
+        ul {
+            li {
+                padding: 0 0 calc(.2em + 1.5vw) calc(.1em + 1vw);
+
+                span {
+                    font-size: calc(.2em + 2vw);
+                }
+
+                &:nth-child(n+2) {
+                    padding-top: calc(.2em + 2vw);
+                }
+            }
+        }
+    }
+
+    .footer {
+        form {
+
+            input[id="name"],
+            input[id="tel"],
+            textarea {
+                margin-bottom: calc(.2em + 2vw);
+                padding: calc(.2em + 1.5vw) calc(.2em + 2.1vw);
+                font-size: calc(.2em + 2vw);
+            }
+
+            input[id="name"]::placeholder,
+            input[id="tel"]::placeholder,
+            textarea::placeholder {
+                font-size: calc(.2em + 2vw);
+            }
+
+            textarea {
+                height: 85px;
+            }
+
+            input[type="submit"] {
+                margin-top: 4px;
+                align-self: flex-start;
+                padding: calc(.2em + 1.5vw) calc(.5em + 5vw);
+                font-size: calc(.2em + 2vw);
+            }
+        }
+    }
+}

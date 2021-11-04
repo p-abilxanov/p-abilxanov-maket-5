@@ -1,0 +1,118 @@
+@media only screen and (min-width: 876px) {
+    .latestCourses {
+        .container {
+            padding-bottom: $latestCoursesContainerPaddingTop;
+        }
+    }
+
+    .latestCourses-carousel {
+        padding-top: $latestCoursesCarouselPaddingTop;
+    }
+
+    .latestCourses__item {
+        margin: $aboutUsItemPadding;
+    }
+
+    .latestCourses__img {
+        &::before {
+            font-size: $latestCoursesSearchIconSize;
+        }
+    }
+
+    .latestCourses__content {
+        padding: $latestCoursesContentPadding;
+
+        .latestCourses__subtitle {
+            padding-bottom: $latestCoursesSubtitlePaddingBottom;
+            font-size: $latestCoursesSubtitleFontSize;
+            width: $latestCoursesSubtitleWidth;
+        }
+
+        .latestCourses__rating {
+            padding-bottom: $latestCoursesRatingPaddingBottom;
+
+            .latestCourses__student {
+                font-size: $latestCoursesStudentFontSize;
+
+                i {
+                    padding-right: $latestCoursesStudentIconPaddingRight;
+                }
+            }
+
+            .latestCourses__star {
+                label {
+                    i {
+                        font-size: $latestCoursesStarFontSize;
+                    }
+                }
+            }
+
+        }
+
+        .latestCourses__btn {
+            a {
+                @include blockSize(136px, 42px);
+                font-size: $latestCoursesBtnFontSize;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .latestCourses {
+        .container {
+            padding-bottom: calc(.5em + 5vw);
+        }
+    }
+
+    .latestCourses-carousel {
+        padding-top: calc(.5em + 4vw);
+    }
+
+    .latestCourses__item {
+        margin: $aboutUsItemPadding;
+    }
+
+    .latestCourses__img {
+        &::before {
+            font-size: calc(.5em + 5vw);
+        }
+    }
+
+    .latestCourses__content {
+        padding: calc(.3em + 2vw);
+
+        .latestCourses__subtitle {
+            padding-bottom: calc(.3em + 2vw);
+            font-size: calc(.3em + 3vw);
+        }
+
+        .latestCourses__rating {
+            padding-bottom: calc(.3em + 2vw);
+
+            .latestCourses__student {
+                font-size: calc(.3em + 2vw);
+
+                i {
+                    padding-right: calc(.1em + 1vw);
+                }
+            }
+
+            .latestCourses__star {
+                label {
+                    i {
+                        font-size: calc(.3em + 2vw);
+                    }
+                }
+            }
+
+        }
+
+        .latestCourses__btn {
+            a {
+                font-size: calc(.3em + 2vw);
+                padding: calc(.1em + 1vw) calc(.2em + 2vw);
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@media only screen and (min-width: 1130px) {
+    .macbook {
+        background: $videoMacBookBgColor;
+
+        .container {
+            background: url(../img/mac.png);
+            background-size: auto auto;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            padding-top: $videoMacBookPaddingTop;
+            padding-bottom: $videoMacBookPaddingBottom;
+        }
+    }
+
+    .macbook__item {
+        &::after {
+            @include blockSize(180px, 180px);
+            font-size: $videoPlayIconSize;
+        }
+    }
+
+    video {
+        @include blockSize(815px, 510px);
+    }
+}
+
+@media only screen and (max-width: 1129px) and (min-width: 830px) {
+    .macbook {
+        background: linear-gradient(to top, transparent 10px, #3b3b3d 10px);
+
+        .container {
+            background: url(../img/mac.png);
+            background-size: 800px auto;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            padding-top: 180px;
+            padding-bottom: 55px;
+        }
+    }
+
+    .macbook__item {
+        &::after {
+            @include blockSize(180px, 180px);
+            font-size: $videoPlayIconSize;
+        }
+    }
+
+    video {
+        @include blockSize(590px, 375px);
+    }
+}
+
+@media only screen and (max-width: 829px) and (min-width: 535px) {
+    .macbook {
+        background: linear-gradient(to top, transparent 5px, #3b3b3d 5px);
+
+        .container {
+            background: url(../img/mac.png);
+            background-size: 500px auto;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            padding-top: 100px;
+            padding-bottom: 35px;
+        }
+    }
+
+    .macbook__item {
+        &::after {
+            @include blockSize(calc(1em + 10vw), calc(1em + 10vw));
+            font-size: calc(.4em + 5vw);
+        }
+    }
+
+    video {
+        @include blockSize(370px, 232px);
+    }
+}
+
+@media only screen and (max-width: 534px) {
+    .macbook {
+        background: linear-gradient(to top, transparent 2px, #3b3b3d 2px);
+
+        .container {
+            background: url(../img/mac.png);
+            background-size: 300px auto;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .macbook__item {
+        &::after {
+            @include blockSize(calc(.5em + 7vw), calc(.5em + 7vw));
+            font-size: calc(.3em + 2vw);
+        }
+    }
+
+    video {
+        @include blockSize(220px, 140px);
+    }
+}

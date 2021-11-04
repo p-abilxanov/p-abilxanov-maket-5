@@ -1,0 +1,102 @@
+@media only screen and (min-width: 876px) {
+    .gallery__tabs {
+        padding-bottom: $galleryTabsPaddingBottom;
+        padding-top: $galleryTabsPaddingTop;
+    }
+
+    .gallery__label {
+        padding-bottom: $galleryLabelPaddingBottom;
+
+        label {
+            padding: $galleryLabelPadding;
+            font-size: $galleryLabelFontSize;
+        }
+    }
+
+    .galleryCarousel__item {
+        .galleryCarousel__img {
+            img {
+                @include blockSize(none, auto);
+                max-width: $galleryImgMaxWidth;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 875px) {
+    .gallery__tabs {
+        padding-top: calc(1em + 5vw);
+        padding-bottom: calc(.5em + 4vw);
+    }
+
+    .gallery__label {
+        padding-bottom: calc(.5em + 4vw);
+
+        label {
+            padding: calc(.1em + 1vw) calc(.1em + 2vw);
+            font-size: calc(.2em + 1.5vw);
+        }
+    }
+
+    .galleryCarousel__item {
+        @include blockSize(80vw, auto);
+
+        .galleryCarousel__img {
+            @include blockSize(100%, 100%);
+
+            img {
+                @include blockSize(100%, 100%);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 577px) {
+    .gallery__label {
+        position: absolute;
+    }
+
+    .galleryCarousel__hover {
+        ul {
+            li {
+                &:nth-child(n+2) {
+                    margin-left: $galleryCarouselHoverMarginLeft;
+                }
+
+                label {
+                    @include blockSize($galleryCarouselHoverLabelSize, $galleryCarouselHoverLabelSize);
+
+                    i {
+                        font-size: $galleryCarouselHoverLabelFontSize;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .gallery__label {
+        position: sticky;
+        z-index: 6;
+    }
+
+    .galleryCarousel__hover {
+        ul {
+            li {
+                &:nth-child(n+2) {
+                    margin-left: calc(.2em + 2vw);
+                }
+
+                label {
+                    @include blockSize(calc(1em + 6vw), calc(1em + 6vw));
+
+                    i {
+                        font-size: calc(.2em + 3vw);
+                    }
+                }
+            }
+        }
+    }
+}

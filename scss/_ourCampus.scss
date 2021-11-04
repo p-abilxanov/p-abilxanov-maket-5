@@ -1,0 +1,83 @@
+.ourCampus {
+    width: 100%;
+    background-color: $ourCampusBgColor;
+
+    .container {
+        overflow: hidden;
+        @include flexbox(column, none, none);
+    }
+}
+
+.ourCampus__title {
+    align-self: center;
+}
+
+.ourCampus-carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @include flexbox(none, center, none);
+
+    .slick-dots {
+        cursor: pointer;
+        top: 0;
+        position: absolute;
+        @include flexbox(none, none, none);
+
+        .slick-active {
+            button {
+                width: 53px;
+                background-color: $bannerBtnBorderColor;
+            }
+        }
+
+        li {
+            button {
+                display: block;
+                @include blockSize(43px, 3px);
+                transition: width .5s, background-color .5s;
+                background-color: $aboutUsTitleColor;
+                font-size: 0;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .ourCampus__item {
+        cursor: pointer;
+        margin: 0 15px;
+        position: relative;
+
+        img {
+            @include blockSize(100%, auto);
+        }
+
+        &:hover {
+
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &::before,
+        &::after {
+            opacity: 0;
+            transition: opacity .5s;
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            @include blockSize(100%, calc((100% - 1px) / 2));
+            background: $ourCampusHoverBlockBgColor;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+}

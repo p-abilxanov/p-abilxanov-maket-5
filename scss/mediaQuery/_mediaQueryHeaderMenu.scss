@@ -1,0 +1,178 @@
+@media only screen and (min-width: 876px) {
+    .header__menu {
+        .container {
+            height: $headerMenuHeight;
+        }
+    }
+
+    .header__logo {
+        img {
+            @include blockSize(auto, auto);
+        }
+
+        span {
+            padding-left: $headerLogoTextPaddingLeft;
+            font-size: $headerLogoTextFontSize;
+        }
+    }
+
+    .header__navigation {
+        padding-right: $headerNavigationPaddingRight;
+
+        ul {
+            @include flexbox(none, none, center);
+
+            li {
+                a {
+                    padding: 0 $headerNavigationItemPadding;
+                    font-size: $headerNavigationItemFontSize;
+                }
+            }
+
+            &:last-child a::after {
+                right: 5px;
+            }
+        }
+    }
+
+    .header__search {
+        position: absolute;
+        padding-left: $headerSearchPaddingLeft;
+
+        input[type="checkbox"] {
+            &:checked~input {
+                width: $headerSearchCheckedWidth;
+                padding: #{$headerSearchCheckedPadding / 2} $headerSearchCheckedPadding;
+                border-color: $headerSearchCheckedBorderColor;
+                transition-delay: 0s, 0s;
+            }
+        }
+
+        input[type="search"] {
+            width: 0;
+            font-size: $headerSearchInputFontSize;
+            border-radius: $headerSearchInputBorderRadius;
+            padding: $headerSearchInputBorderRadius 0;
+            border: 1px solid transparent;
+            position: absolute;
+            right: 20px;
+            transition: width .5s, border-color .5s;
+            transition-delay: 0s, .5s;
+        }
+    }
+
+    input[id="hamburgerMenu"] {
+        display: none;
+
+        &+label {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .header__menu {
+        .container {
+            padding: calc(.3em + 2vw) 20px;
+        }
+    }
+
+    .header__logo {
+        img {
+            @include blockSize(calc(.4em + 5vw), auto);
+        }
+
+        span {
+            padding-left: 8px;
+            font-size: calc(.3em + 3vw);
+        }
+    }
+
+    .header__navigation {
+        position: fixed;
+        right: -70vw;
+        top: 0;
+        @include blockSize(70vw, 100vh);
+        background-color: rgba($color: #000000, $alpha: .8);
+        z-index: 2;
+        transition: right .5s;
+
+        ul {
+            @include blockSize(100%, 100%);
+            @include flexbox(column, space-evenly, center);
+
+            li {
+                a {
+                    padding: 0 calc(.2em + 2vw);
+                    font-size: calc(.2em + 2vw);
+                    color: $hamburgerMenuBgColor;
+                }
+            }
+        }
+    }
+
+    .header__search {
+        padding-left: 5px;
+
+        label {
+            order: 1;
+            margin-left: calc(.3em + 3vw);
+
+            i {
+                font-size: calc(.3em + 3vw);
+            }
+        }
+
+        input[type="search"] {
+            order: 0;
+            width: calc(2em + 30vw);
+            height: auto;
+            font-size: calc(.2em + 2vw);
+            border-radius: 5px;
+            padding: calc(.1em + 1vw) calc(.2em + 1.5vw);
+            border: 1px solid #999;
+        }
+    }
+
+    input[id="hamburgerMenu"] {
+        display: none;
+
+        &:checked+label {
+            position: fixed;
+            right: calc(.3em + 2vw);
+            top: calc(.3em + 2.5vw);
+        }
+
+        &+label {
+            right: calc(.3em + 2vw);
+            top: calc((-.3em - 2.2vw) * 4);
+            display: block;
+            @include blockSize(20px, 10px);
+            transition: right .5s;
+
+            span {
+                @include blockSize(20px, 2px);
+
+                &::before {
+                    top: 4px;
+                }
+
+                &::after {
+                    top: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1135px) {
+    .header__search {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 1134px) {
+    .header__search {
+        right: 15px;
+    }
+}

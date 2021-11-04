@@ -1,0 +1,69 @@
+@media only screen and (min-width: 876px) {
+    .teachers-carousel {
+        padding-top: $teachersCarouselPaddingTop;
+        padding-bottom: $teachersCarouselPaddingBottom;
+    }
+
+    .teachers__item {
+        .teachers__hover {
+            padding: $teachersCarouselHoverBlockPadding;
+
+            .teachers__subtitle {
+                padding-bottom: $teachersCarouselSubtitlePaddingBottom;
+                font-size: $teachersCarouselSubtitleFontSize;
+            }
+
+            .teachers__text {
+                padding-bottom: $teachersCarouselTextPaddingBottom;
+                font-size: $teachersCarouselTextFontSize;
+            }
+
+            ul {
+                li {
+                    a {
+                        @include blockSize(50px, 50px);
+
+                        i {
+                            font-size: $teachersCarouselSocialIconSize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .teachers-carousel {
+        padding-top: calc(.5em + 5vw);
+        padding-bottom: calc(.5em + 5vw);
+    }
+
+    .teachers__item {
+        .teachers__hover {
+            padding: calc(.2em + 3vw) calc(.3em + 3vw);
+
+            .teachers__subtitle {
+                padding-bottom: calc(.2em + 1.5vw);
+                font-size: calc(.2em + 3vw);
+            }
+
+            .teachers__text {
+                padding-bottom: calc(.2em + 3vw);
+                font-size: calc(.2em + 2vw);
+            }
+
+            ul {
+                li {
+                    a {
+                        @include blockSize(calc(1em + 5vw), calc(1em + 5vw));
+
+                        i {
+                            font-size: calc(.3em + 3vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

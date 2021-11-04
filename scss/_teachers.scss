@@ -1,0 +1,104 @@
+.teachers {
+    width: 100%;
+
+    .container {
+        overflow: hidden;
+        @include flexbox(column, none, none);
+    }
+}
+
+.teachers__title {
+    align-self: center;
+}
+
+.teachers-carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @include flexbox(none, center, none);
+
+    .slick-dots {
+        cursor: pointer;
+        top: 0;
+        position: absolute;
+        @include flexbox(none, none, none);
+
+        .slick-active {
+            button {
+                width: 53px;
+                background-color: $bannerBtnBorderColor;
+            }
+        }
+
+        li {
+            button {
+                display: block;
+                @include blockSize(43px, 3px);
+                transition: width .5s, background-color .5s;
+                background-color: $aboutUsTitleColor;
+                font-size: 0;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .teachers__item {
+        cursor: pointer;
+        position: relative;
+
+        img {
+            @include blockSize(100%, auto);
+        }
+
+        &:hover .teachers__hover {
+            bottom: 0;
+        }
+
+        .teachers__hover {
+            @include blockSize(100%, auto);
+            position: absolute;
+            bottom: -300px;
+            background-color: $teachersHoverBlockBgColor;
+            @include flexbox(column, none, none);
+            transition: bottom .5s;
+
+            .teachers__subtitle {
+                color: $teachersHoverBlockSubtitleColor;
+                text-align: center;
+                font-family: $fontFamilyOpenSansRegular;
+            }
+
+            .teachers__text {
+                color: $teachersHoverBlockSubtitleColor;
+                text-align: center;
+                font-family: $fontFamilyOpenSansRegular;
+            }
+
+            ul {
+                @include flexbox(none, space-around, center);
+
+                li {
+                    a {
+                        @include flexbox(none, center, center);
+                        transition: background-color .5s;
+                        border: 1px solid $teachersHoverBlockSocialIconColor;
+                        border-radius: 5px;
+
+                        &:hover {
+                            background-color: $teachersHoverBlockSocialIconColor;
+
+                            i {
+                                color: $teachersHoverBlockSocialIconHoverColor;
+                                transition: color .5s;
+                            }
+                        }
+
+                        i {
+                            color: $teachersHoverBlockSocialIconColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

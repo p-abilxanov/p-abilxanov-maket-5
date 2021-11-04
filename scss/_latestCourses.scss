@@ -1,0 +1,156 @@
+.latestCourses {
+    width: 100%;
+    background: url(../img/Background.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .container {
+        @include flexbox(column, none, none);
+    }
+}
+
+.latestCourses__title {
+    align-self: center;
+}
+
+.latestCourses-carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @include flexbox(none, center, none);
+
+    .slick-dots {
+        cursor: pointer;
+        top: 0;
+        position: absolute;
+        @include flexbox(none, none, none);
+
+        .slick-active {
+            button {
+                width: 53px;
+                background-color: $bannerBtnBorderColor;
+            }
+        }
+
+        li {
+            button {
+                display: block;
+                @include blockSize(43px, 3px);
+                transition: width .5s, background-color .5s;
+                background-color: $aboutUsTitleColor;
+                font-size: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.latestCourses__item {
+    @include flexbox(column, center, center);
+    position: relative;
+    background-color: $latestCoursesItemBgColor;
+    box-shadow: 0px 2px 5px 0px $latestCoursesBtnBoxShadowColor;
+}
+
+.latestCourses__img {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover::before {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "\f002";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        @include flexbox(none, center, center);
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        background-color: $bannerBoxShadowColor;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+}
+
+.latestCourses__content {
+    @include flexbox(column, none, none);
+
+    .latestCourses__subtitle {
+        font-family: $fontFamilyOpenSansSemiBold;
+        text-transform: capitalize;
+        color: $latestCoursesSubtitleColor;
+        line-height: 1.455;
+    }
+
+    .latestCourses__rating {
+        @include flexbox(none, space-between, center);
+
+        .latestCourses__student {
+            color: $latestCoursesStudentColor;
+        }
+
+        .latestCourses__star {
+            @include flexbox(row-reverse, none, center);
+
+            input {
+                display: none;
+
+                &:checked~label i {
+                    color: $latestCoursesStarHoverColor;
+                }
+            }
+
+            label {
+                &:hover {
+
+                    &~label i,
+                    i {
+                        color: $latestCoursesStarHoverColor;
+                    }
+                }
+
+                cursor: pointer;
+
+                i {
+                    color: $latestCoursesStarColor;
+                    transition: color .5s;
+                }
+            }
+        }
+
+    }
+
+    .latestCourses__btn {
+        @include flexbox(none, space-between, center);
+
+        a {
+            @include flexbox(none, center, center);
+            font-family: $fontFamilyRobotoBold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px 0px $latestCoursesBtnBoxShadowColor;
+
+            &:nth-child(1) {
+                color: rgb(255, 254, 254);
+                background-color: $latestCoursesBtnBgColor;
+            }
+
+            &:nth-child(2) {
+                border: 1px solid $latestCoursesBtnBgColor;
+                color: $latestCoursesBtnBgColor;
+                background-color: rgb(255, 254, 254);
+            }
+        }
+    }
+}

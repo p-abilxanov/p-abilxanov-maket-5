@@ -1,0 +1,13 @@
+@media only screen and (min-width: 876px) {
+    .ourCampus-carousel {
+        padding-top: $teachersCarouselPaddingTop;
+        padding-bottom: $teachersCarouselPaddingBottom;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .ourCampus-carousel {
+        padding-top: calc(.5em + 5vw);
+        padding-bottom: calc(.5em + 5vw);
+    }
+}

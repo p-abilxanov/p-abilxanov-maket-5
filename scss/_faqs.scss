@@ -1,0 +1,236 @@
+.faqs {
+    width: 100%;
+
+    .container {
+        overflow: hidden;
+        @include flexbox(column, none, none);
+    }
+}
+
+.faqs__title {
+    align-self: center;
+}
+
+//////// slick dots ///////
+.faqs-carousel {
+    .slick-dots {
+        cursor: pointer;
+        position: absolute;
+        bottom: calc(100% + 15px);
+        right: 0;
+        z-index: 5;
+        @include flexbox(none, none, none);
+
+        .slick-active {
+            button {
+                background-color: rgb(227, 75, 17);
+            }
+        }
+
+        li {
+            margin: 0 5px;
+
+            button {
+                border: 2px solid rgb(227, 75, 17);
+                display: block;
+                @include blockSize(18px, 18px);
+                border-radius: 50%;
+                transition: background-color .5s;
+                font-size: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+//////// slick dots ///////
+.faqsInner-carousel {
+    .slick-dots {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        .slick-active {
+            button {
+                width: 53px;
+                background-color: $bannerBtnBorderColor;
+            }
+        }
+
+        li {
+            margin: 0 0;
+
+            button {
+                display: block;
+                @include blockSize(43px, 3px);
+                transition: width .5s, background-color .5s;
+                background-color: $aboutUsTitleColor;
+                font-size: 0;
+                overflow: hidden;
+                border: none;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+.faqs__main {
+    width: 100%;
+}
+
+.our-instructors {
+    overflow: hidden;
+
+    .faqs__accordion {
+        width: 100%;
+
+        .faqsAccordion__item {
+            width: 100%;
+            margin-top: 1px;
+
+            input {
+                display: none;
+
+                &:checked {
+                    &+label .accordion__main {
+                        padding-top: $accordionMainPaddingTop;
+                    }
+
+                    &+label .accordion-label {
+                        background-color: $ourBlogLabelBgColor;
+
+                        i {
+                            transform: rotateZ(90deg);
+                        }
+                    }
+                }
+            }
+
+            label {
+                border-radius: 3px;
+                width: 100%;
+                @include flexbox(column, none, none);
+                cursor: pointer;
+
+                .accordion-label {
+                    width: 100%;
+                    background-color: rgba(0, 0, 2, .5);
+                    transition: background-color .5s;
+                    @include flexbox(none, none, center);
+
+                    span:nth-child(1) {
+                        @include flexbox(none, center, center);
+                        border-radius: 50%;
+                        border: 1px solid $ourBlogIconBorderColor;
+
+                        i {
+                            color: $ourBlogIconBorderColor;
+                            transition: transform .5s;
+                            transform-origin: center center;
+                        }
+                    }
+
+                    span:nth-child(2) {
+                        font-family: $fontFamilyRobotoLight;
+                        color: $ourBlogIconBorderColor;
+                    }
+                }
+            }
+
+            .accordion__main {
+                overflow: hidden;
+                @include flexbox(none, none, flex-start);
+                background-color: #fff;
+
+                .accordion__img {
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+
+                .accordion__content {
+                    @include flexbox(column, none, none);
+
+                    .accordion__title {
+                        font-family: $fontFamilyRobotoMedium;
+                        color: $faqsAccordionTitleColor;
+                    }
+
+                    .accordion__subtitle {
+                        font-family: $fontFamilyRobotoRegular;
+                        color: $faqsAccordionTitleColor;
+                    }
+
+                    .accordion__text {
+                        font-family: $fontFamilyRobotoLight;
+                        color: $faqsAccordionTitleColor;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faqsInnerCarousel__item {
+    width: 100%;
+    @include flexbox(none, none, flex-start);
+
+    .faqsCarousel__img {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .faqsCarousel__date {
+        font-family: $fontFamilyRobotoRegular;
+        color: $faqsAccordionTitleColor;
+    }
+
+    .faqsCarousel__title {
+        line-height: 1.5;
+        color: $faqsAccordionTitleColor;
+        font-family: $fontFamilyRobotoMedium;
+    }
+}
+
+.faqsCarousel__content {
+    @include flexbox(column, none, none);
+
+    .faqsCarousel__text {
+        font-family: $fontFamilyOpenSansRegular;
+        color: $faqsAccordionTitleColor;
+        line-height: 1.857;
+    }
+
+    .faqsCarousel__btn {
+        align-self: flex-start;
+
+        a {
+            display: block;
+            border-radius: 3px;
+            color: $faqsCarouselBtnColor;
+            font-family: $fontFamilyOpenSansRegular;
+            background-color: $ourBlogLabelBgColor;
+            box-shadow: $faqsCarouselBtnBoxshadow;
+            transition: box-shadow .5s;
+            overflow: hidden;
+
+            &:hover {
+                box-shadow: $faqsCarouselBtnHoverBoxshadow;
+            }
+        }
+    }
+}
+
+.ourInstructors__title,
+.ourBlog__title {
+    font-family: $fontFamilyRobotoMedium;
+    color: $faqsAccordionTitleColor;
+    text-transform: capitalize;
+}
